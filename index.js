@@ -8,11 +8,18 @@ const comapanyLogoUrl = [
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJjlEOgjrmKB1ZRS6EnJaHkulR1Ra_bFFH1A&usqp=CAU',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVzM05pP8UtmewbU4rmlQseHtFrOqZrXAiw&usqp=CAU',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyEXO-RySDYMTCWiDAhGm6gkwN9h-ZddJc_Q&usqp=CAU',
-
 ]
 const clientsImages = document.getElementById('clients-images')
 comapanyLogoUrl.forEach(url=>{
     const div = document.createElement('div')
     div.innerHTML = `<img src=${url} class= alt="">`
     clientsImages.appendChild(div)
+})
+
+// ========= responsive ========== 
+const barIcon = document.getElementById('bar-icon')
+const navbar = document.getElementById('navbar-list')
+
+barIcon.addEventListener('click',() =>{
+    navbar.classList.toggle('show')
 })

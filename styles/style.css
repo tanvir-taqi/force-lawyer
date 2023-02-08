@@ -15,19 +15,27 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-body{
+body {
     background: linear-gradient(to bottom, #f7f7f7, #fff);
 }
-h1,h2,h3,h4,h5,h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     letter-spacing: 0.5px;
     margin: 20px 0;
 }
+
 p {
     margin: 10px 0;
     padding: 0 5px;
     letter-spacing: 0.3px;
 }
-.centered-text{
+
+.centered-text {
     text-align: center;
     font-size: 50px;
 }
@@ -35,57 +43,69 @@ p {
 /* navbar */
 
 .header {
-    display: flex ;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     background: var(--menu-color);
 }
-.navbar{
+
+.navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
 }
-.navbar ul{
+
+.navbar ul {
     display: flex;
     list-style: none;
     margin: 20px 0px;
 }
-.navbar ul li{
-    font-family: century;
+
+.navbar ul li {
+    margin: 20px 0px;
+    /* font-family: century; */
     font-size: 18px;
     font-weight: bold;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     text-decoration: none;
     color: var(--dark-color);
     padding: 8px 25px;
     transition: all .5s ease;
 }
-.navbar ul li a:hover{
+
+.navbar ul li a:hover {
     background-color: white;
     color: black;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--primary-bg);
 }
 
+.bar-icon {
+    display: none;
+}
+
 .logo {
     font-family: 'Monoton', cursive;
-    text-decoration: none ;
-    
+    text-decoration: none;
+
     font-size: 40px;
     color: black;
 }
 
 /* Home */
-.home,.contact {
+.home,
+.contact {
 
     background: linear-gradient(70deg, var(--primary-bg), rgb(17, 17, 17));
     color: white;
     padding: 80px 20px;
 }
 
-.about, .clients {
+.about,
+.clients {
     background: linear-gradient(170deg, var(--bright-color), rgba(17, 17, 17, 0.205));
     color: var(--dark-color);
     padding: 80px 20px;
@@ -98,7 +118,7 @@ section {
 
 .home,
 .about {
-   
+
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -125,7 +145,8 @@ section {
 }
 
 .heading-home,
-.heading-about, .heading-contact {
+.heading-about,
+.heading-contact {
     font-family: century;
     font-size: 50px;
     text-align: center;
@@ -157,15 +178,16 @@ section {
     animation-timing-function: ease-in-out;
 }
 
-.clients-img-container{
+.clients-img-container {
     display: flex;
     width: 100%;
     justify-content: space-around;
     padding: 20px;
 }
+
 .clients-images {
-    display: grid ;
-    grid-template-columns: repeat(5,1fr);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
 }
 
@@ -175,21 +197,23 @@ section {
 }
 
 
-.contact{
+.contact {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    
+
     padding: 20px;
 }
-.form{
+
+.form {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     align-items: center;
     margin: 20px 0;
 }
-.input{
+
+.input {
     padding: 12px;
     margin: 15px;
     width: 70%;
@@ -198,28 +222,33 @@ section {
     border-radius: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .input:focus {
     box-shadow: 0 0 10px white;
 }
 
 
 /* footer */
-.footer{
+.footer {
     margin: 20px 0 0 0;
     width: 100%;
     background: var(--menu-color);
     padding: 80px 0 20px 0;
     border-top-right-radius: 200px;
     border-top-left-radius: 200px;
-   
+
 }
-.footer-container{
+
+.footer-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
 }
-.logo-container, .info, .letter{
+
+.logo-container,
+.info,
+.letter {
     display: flex;
     justify-content: center;
     color: var(--dark-color);
@@ -227,28 +256,34 @@ section {
     flex: 1 0 20rem;
     flex-flow: column wrap;
 }
-.logo-container{
+
+.logo-container {
     text-align: center;
 }
-.icons i{
+
+.icons i {
     font-size: 20px;
     margin: 5px;
     padding: 8px;
     border: 1px solid var(--dark-color);
     border-radius: 50%;
 }
-.icons i:hover{
-    background:linear-gradient(70deg, var(--primary-bg), white);
+
+.icons i:hover {
+    background: linear-gradient(70deg, var(--primary-bg), white);
     cursor: pointer;
 }
-.logo h1{
+
+.logo h1 {
     font-size: 1.2rem;
 }
-.info i{
+
+.info i {
     margin: 15px 0;
     font-size: 18px;
 }
-.fas::after{
+
+.fas::after {
     content: attr(data-text);
     font-size: 14px;
     margin: 1px 10px;
@@ -258,7 +293,7 @@ section {
 .text p {
     font-size: 12px;
     text-align: center;
-    color: var(--dark-color) ;
+    color: var(--dark-color);
     padding: 10px 0;
 }
 
@@ -278,6 +313,10 @@ section {
 }
 
 @media screen and (max-width: 992px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
     .home {
         flex-direction: column;
     }
@@ -306,12 +345,42 @@ section {
         border-bottom-right-radius: 50px;
         border-bottom-left-radius: 50px;
     }
+
     .clients-images {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media screen and (max-width: 570px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        padding: 20px 0;
+        flex-direction: column;
+        background: var(--menu-color);
+        overflow-x: hidden;
+        display: none;
+        
+    }
+
+    #navbar-list.show {
+        display: block;
+    }
+
+    .navbar ul li {
+        margin: 10px 0px;
+    }
+
+    .bar-icon {
+        display: block;
+    }
 
     .home,
     .about {
@@ -322,7 +391,6 @@ section {
     .about-img {
         width: 300px;
         border-radius: 10px;
-
     }
 
     .home-body,
@@ -340,19 +408,23 @@ section {
         padding: 10px 10px;
         background-color: transparent;
     }
-     .footer {
+
+    .footer {
         border-top-right-radius: 30px;
         border-top-left-radius: 30px;
-     }
+    }
+
     section {
         border-bottom-right-radius: 30px;
         border-bottom-left-radius: 30px;
     }
+
     .clients-images {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
-    .clients-img-container{
-        
+
+    .clients-img-container {
+
         padding: 5px;
     }
 }
