@@ -403,45 +403,92 @@ section {
     }
 }
 
+
+
 @media screen and (max-width: 992px) {
+    .logo {
+        font-size: 18px;
+    }
+
     .navbar ul {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        padding: 20px 0;
+        flex-direction: column;
+        background: var(--menu-color);
+        overflow-x: hidden;
+        display: none;
+        
+    }
+
+    #navbar-list.show {
+        display: block;
+    }
+
+    .navbar ul li {
+        margin: 10px 0px;
+    }
+
+    .bar-icon {
+        display: block;
+    }
+
+    .home,
+    .about {
         flex-direction: column;
     }
 
-    .home {
-        flex-direction: column;
-    }
-
-    .home-img {
-        width: 400px;
+    .home-img,
+    .about-img {
+        width: 300px;
         border-radius: 10px;
     }
 
-    .home-body {
+    .home-body,
+    .about-body {
         width: 100%;
         padding: 5px;
     }
 
-    .heading-home {
-        font-size: 30px;
+    .heading-home,
+    .heading-about {
+        font-size: 20px;
     }
 
     .btn {
         padding: 10px 10px;
         background-color: transparent;
+    }
 
+    .footer {
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
     }
 
     section {
-        border-bottom-right-radius: 50px;
-        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
     }
+    #service-cards, .faq-card-container{
+        
+        grid-template-columns: repeat(1,1fr);
+       
+        
+    }
+
 
     .clients-images {
         grid-template-columns: repeat(3, 1fr);
     }
-}
 
+    .clients-img-container {
+
+        padding: 5px;
+    }
+}
 @media screen and (max-width: 570px) {
     .logo {
         font-size: 18px;
